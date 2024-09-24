@@ -13,7 +13,7 @@ if st.button("Get Prediction"):
     input_data = {"age": age, "income": income}
     
     # Send data to FastAPI backend
-    response = requests.post("http://localhost:8000/predict", json=input_data)
+    response = requests.post("https://first-ml-app.onrender.com/predict", json=input_data)
     
     if response.status_code == 200:
         prediction = response.json()["prediction"]
